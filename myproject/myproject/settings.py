@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'accounts',
     'myapp',
 ]
 
@@ -81,6 +82,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Custom user
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 # Password validation
