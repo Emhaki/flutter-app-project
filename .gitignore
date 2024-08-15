@@ -1,0 +1,29 @@
+# Python 관련
+*.pyc
+__pycache__/
+
+# 환경 설정 파일
+.env
+
+# 가상 환경 디렉터리
+venv/
+myenv/
+
+# Django 관련
+db.sqlite3
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+media/
+staticfiles/
+
+# VSCode 설정
+.vscode/
+
+# PyCharm 설정
+.idea/
+
+# 기타
+.DS_Store
+*.swp

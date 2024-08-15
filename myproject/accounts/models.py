@@ -10,6 +10,7 @@ class UserManger(BaseUserManager):
             raise ValueError('must have user nickname')
         if not name:
             raise ValueError('must have user name')
+        
         user = self.model(
             email = self.normalize_email(email),
             nickname = nickname,
@@ -17,6 +18,7 @@ class UserManger(BaseUserManager):
         )
         user.set_password(password)
         user.save(using=self._db)
+        
         return user
 
 class CustomUser(AbstractUser):
