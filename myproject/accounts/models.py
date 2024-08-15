@@ -18,7 +18,7 @@ class UserManger(BaseUserManager):
         )
         user.set_password(password)
         user.save(using=self._db)
-        
+
         return user
 
 class CustomUser(AbstractUser):
@@ -26,7 +26,8 @@ class CustomUser(AbstractUser):
     email = models.EmailField(default='', max_length=100, null=False, blank=False, unique=True)
     nickname = models.CharField(default='', max_length=100, null=False, blank=False, unique=True)
     name = models.CharField(default='', max_length=100, null=False, blank=False)
-
+    created_at = models.DateTimeField(auto_now_add=True) # 생성 시간
+    
     # User 모델의 필수 field
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
